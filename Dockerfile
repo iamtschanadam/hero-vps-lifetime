@@ -126,7 +126,9 @@ RUN rm -rf /etc/apt/sources.list && \
 	apt install -y /tmp/packages-microsoft-prod.deb && \
 	apt update && \
 	apt-get install -y powershell
-
+#FreedomBox
+	apt-get update
+	DEBIAN_FRONTEND=noninteractive apt-get install -y freedombox
 
 ENTRYPOINT ["supervisord", "-c"]
 
